@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portal Choferes - Expreso Diemar</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --primary: #007AFF; /* Azul iOS */
+            --danger: #FF3B30;  /* Rojo iOS */
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            transition: transform 0.1s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-ticket {
+            background-color: var(--primary);
+            border: 1px solid #0056b3;
+        }
+
+        .btn-falla {
+            background-color: var(--card-bg);
+            border: 2px solid var(--danger);
+            color: var(--danger);
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">EXPRESO <span style="color: var(--primary);">DIEMAR</span></div>
+
+    <div class="container">
+        <a href="https://diemar.app.n8n.cloud/form-test/25528953-60d1-4bcb-8385-1ca38df5aaad" class="btn btn-ticket">
+            ⛽ CARGAR TICKET
+        </a>
+
+        <a href="https://forms.gle/EXfCVK2XAVfzUiE86" class="btn btn-falla">
+            🛠️ REPORTAR FALLA
+        </a>
+    </div>
+
+    <div class="footer">Sistema de Gestión de Flota v1.0</div>
+
+</body>
+</html>
