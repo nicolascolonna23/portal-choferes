@@ -7,10 +7,9 @@
     <style>
         :root {
             --bg-color: #121212;
-            --card-bg: rgba(30, 30, 30, 0.8);
             --primary: #007AFF; 
             --danger: #FF3B30;  
-            --text: #ffffff;
+            --secondary: #E5E5EA;
         }
 
         body, html {
@@ -31,8 +30,8 @@
             background-image: url('IMG_3101.jpg');
             background-size: cover;
             background-position: center;
-            filter: blur(10px) brightness(40%); /* Difuminado y oscurecido */
-            transform: scale(1.1); /* Evita bordes blancos por el blur */
+            filter: blur(10px) brightness(35%); 
+            transform: scale(1.1); 
             z-index: -1;
         }
 
@@ -42,15 +41,15 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            padding: 25px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
         /* --- LOGO --- */
         .logo-container {
-            width: 80%;
-            max-width: 280px;
-            margin-bottom: 50px;
+            width: 70%;
+            max-width: 240px;
+            margin-bottom: 35px;
         }
 
         .logo-container img {
@@ -65,18 +64,18 @@
             max-width: 400px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 85px;
+            height: 70px;
             border-radius: 18px;
             text-decoration: none;
             color: white;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
             transition: all 0.2s ease;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -95,17 +94,25 @@
         }
 
         .btn-falla {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 59, 48, 0.15);
             border: 2px solid var(--danger);
             color: var(--danger);
             backdrop-filter: blur(10px);
         }
 
+        .btn-consulta {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            backdrop-filter: blur(10px);
+        }
+
         .footer {
-            margin-top: 60px;
-            font-size: 11px;
-            color: rgba(255,255,255,0.5);
+            margin-top: 40px;
+            font-size: 10px;
+            color: rgba(255,255,255,0.4);
             letter-spacing: 2px;
+            text-align: center;
         }
     </style>
 </head>
@@ -125,6 +132,10 @@
 
             <a href="https://forms.gle/EXfCVK2XAVfzUiE86" class="btn btn-falla">
                 🛠️ Reportar Falla
+            </a>
+
+            <a href="https://nicolascolonna23.github.io/Consulta-Choferes/" class="btn btn-consulta">
+                🔍 Consulta de Fallas
             </a>
         </div>
 
