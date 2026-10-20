@@ -88,10 +88,6 @@
             background-color: var(--primary);
             border: 1px solid rgba(255,255,255,0.2);
         }
-        .btn-checklist {
-            background-color: var(--success);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
         .btn-falla {
             background-color: rgba(255, 59, 48, 0.15);
             border: 2px solid var(--danger);
@@ -111,59 +107,6 @@
             letter-spacing: 2px;
             text-align: center;
         }
-        /* --- MODAL CHECKLIST --- */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            z-index: 10;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        .modal-overlay.open {
-            display: flex;
-        }
-        .modal-sheet {
-            width: 100%;
-            max-width: 400px;
-            background: #1C1C1E;
-            border-radius: 20px 20px 0 0;
-            padding: 24px 20px 30px;
-            box-sizing: border-box;
-            box-shadow: 0 -8px 30px rgba(0,0,0,0.5);
-        }
-        .modal-title {
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            text-align: center;
-            margin: 0 0 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .modal-sheet .container {
-            gap: 12px;
-        }
-        .btn-modal-digital {
-            background-color: var(--success);
-        }
-        .btn-modal-foto {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid var(--secondary);
-            color: var(--secondary);
-        }
-        .btn-cancelar {
-            background: transparent;
-            color: rgba(255,255,255,0.5);
-            box-shadow: none;
-            height: 44px;
-            font-size: 14px;
-            margin-top: 4px;
-        }
     </style>
 </head>
 <body>
@@ -176,10 +119,7 @@
             <a href="https://carga-combustible.vercel.app" class="btn btn-ticket">
                 ⛽ Cargar Ticket
             </a>
-            <button type="button" class="btn btn-checklist" onclick="abrirChecklist()">
-                📋 Checklist Vehículo
-            </button>
-            <a href="https://forms.gle/EXfCVK2XAVfzUiE86" class="btn btn-falla">
+            <a href="https://app.titanfleetmanagement.com/choferes/" class="btn btn-falla">
                 🛠️ Reportar Falla
             </a>
             <a href="https://nicolascolonna23.github.io/Consulta-Choferes/" class="btn btn-consulta">
@@ -188,33 +128,5 @@
         </div>
         <div class="footer">GESTIÓN DE FLOTA • EXPRESO DIEMAR</div>
     </div>
-
-    <!-- Modal Checklist: elegir digital o foto -->
-    <div class="modal-overlay" id="modalChecklist" onclick="cerrarChecklistFondo(event)">
-        <div class="modal-sheet">
-            <p class="modal-title">Checklist del vehículo</p>
-            <div class="container">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeB20B45agJhOoh1Ixms-HNLmRlzXdYYrec36l-mGwekVvSIw/viewform" class="btn btn-modal-digital">
-                    ✍️ Completar digital
-                </a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7xPEpPTCefmHZR005YuFaYj4a0jN678jGR1mAej81sAS97Q/viewform" class="btn btn-modal-foto">
-                    📷 Subir foto del papel
-                </a>
-                <button type="button" class="btn btn-cancelar" onclick="cerrarChecklist()">Cancelar</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function abrirChecklist() {
-            document.getElementById('modalChecklist').classList.add('open');
-        }
-        function cerrarChecklist() {
-            document.getElementById('modalChecklist').classList.remove('open');
-        }
-        function cerrarChecklistFondo(e) {
-            if (e.target.id === 'modalChecklist') cerrarChecklist();
-        }
-    </script>
 </body>
 </html>
